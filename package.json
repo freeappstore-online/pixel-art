@@ -1,0 +1,24 @@
+{
+  "name": "freepixelartapp",
+  "private": true,
+  "packageManager": "pnpm@10.30.3",
+  "engines": {
+    "node": ">=22"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  },
+  "scripts": {
+    "dev": "pnpm --filter @pixel-art/web dev",
+    "build": "pnpm --filter @pixel-art/web build",
+    "preview": "pnpm --filter @pixel-art/web preview",
+    "typecheck": "pnpm --filter @pixel-art/web exec tsc -b",
+    "test": "pnpm --filter @pixel-art/web test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freeappstore-online/pixel-art.git"
+  }
+}
