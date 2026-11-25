@@ -254,7 +254,8 @@ export default function App() {
     const frame = project.frames[0];
     if (!frame) return;
     const thumbnail = generateThumbnail(frame, project.gridSize);
-    const name = prompt("Save as:", projectName) ?? projectName;
+    const name = prompt("Save as:", projectName);
+    if (name === null) return; // cancelled
     setProjectName(name);
     const item = saveToGallery(name, project, thumbnail, galleryId);
     setGalleryId(item.id);
